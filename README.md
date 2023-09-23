@@ -14,10 +14,22 @@ This repository contains 2 markdown files: README.md and LICENSE.md, as well as 
 
 ### Installation/Building of Code
 
+Importing Packages
+```{r}
+#install.packages("wordcloud")
+#install.packages("wordcloud2")
+#install.packages("tm")
+library(tm)
+library(wordcloud)
+library(RColorBrewer)
+library(wordcloud2)
 ```
+
+Importing Dataset
+```{r}
 library(readr)
-JEOPARDY<- read_csv("~/UVA/Systems/DS 4002/R/JEOPARDY_CSV.csv")
-View(JEOPARDY)
+JEOPARDY<- read_csv("/Users/davidbergman/Downloads/JEOPARDY_CSV.csv")
+
 ```
 
 ### Code Usage
