@@ -14,7 +14,9 @@ This repository contains 2 markdown files: README.md and LICENSE.md, as well as 
 
 ### Installation/Building of Code
 
-Importing Packages
+Implement the following steps to install and build the code:
+
+1. Importing Packages
 ```{r}
 #install.packages("wordcloud")
 #install.packages("wordcloud2")
@@ -25,12 +27,32 @@ library(RColorBrewer)
 library(wordcloud2)
 ```
 
-Importing Dataset
+2. Importing Dataset
 ```{r}
 library(readr)
 JEOPARDY<- read_csv("/Users/davidbergman/Downloads/JEOPARDY_CSV.csv")
+```
+
+3. Data Cleaning
+```{r}
+JEOPARDY$`Air Date` <- substr(JEOPARDY$`Air Date`, 1, 4)
+JEOPARDY$`Air Date` <- as.integer(JEOPARDY$`Air Date`)
+#View(JEOPARDY)
+
+text_data <- JEOPARDY$Question
+
+
+corpus <- Corpus(VectorSource(text_data))
+
+corpus <- tm_map(corpus, content_transformer(tolower))  # Convert to lowercase
+corpus <- tm_map(corpus, removePunctuation)            # Remove punctuation
+corpus <- tm_map(corpus, removeNumbers)                # Remove numbers
+corpus <- tm_map(corpus, removeWords, stopwords("en")) # Remove English stopwords
+corpus <- tm_map(corpus, stripWhitespace)              # Strip whitespace
 
 ```
+
+Utilize tm and word cloud packages for generating word clouds
 
 ### Code Usage
 
