@@ -74,7 +74,7 @@ https://drive.google.com/file/d/0BwT5wj_P7BKXUl9tOUJWYzVvUjA/view?resourcekey=0-
 
 ## Figures
 
-View Figures here.
+View figures here: https://github.com/dtb9de/DS4002P1/tree/13b4944ca0e1a8570ac7ea63c1a0afa8d277f23e/Figures
 
 ## References
 
