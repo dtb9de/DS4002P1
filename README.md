@@ -74,8 +74,7 @@ https://drive.google.com/file/d/0BwT5wj_P7BKXUl9tOUJWYzVvUjA/view?resourcekey=0-
 
 ## Figures
 
-** More figures will be uploaded in MI5 milestone **
-
+View Figures here.
 
 ## References
 
