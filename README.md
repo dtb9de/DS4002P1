@@ -56,6 +56,40 @@ corpus <- tm_map(corpus, stripWhitespace)              # Strip whitespace
 
 ### Code Usage
 
+####Example of producing a wordcloud 
+WordCloud
+
+1. Compile specific years data for analyzing 
+```{r}
+#1984-1991
+years_1_data <- JEOPARDY[JEOPARDY$`Air Date` >= 1984 & JEOPARDY$`Air Date` <= 1990, ]
+years_1_data_text <- years_1_data$Question
+```
+
+2. Subset data and compile into a corpus
+```{r}
+subset_corpus <- Corpus(VectorSource(years_1_data_text))
+```
+
+3. Convert textual data to lowercase, remove unnecessary letters or punction, remove common stopwords and whitespace
+```{r}
+subset_corpus <- tm_map(subset_corpus, content_transformer(tolower))  # Convert to lowercase
+subset_corpus <- tm_map(subset_corpus, removePunctuation)            # Remove punctuation
+subset_corpus <- tm_map(subset_corpus, removeNumbers)                # Remove numbers
+subset_corpus <- tm_map(subset_corpus, removeWords, stopwords("en")) # Remove English stopwords
+subset_corpus <- tm_map(subset_corpus, stripWhitespace)              # Strip whitespace
+```
+
+4. Remove words that are not significant or helpful in data analysis
+```{r}
+words_to_remove <- c("one","first","used","also","like","can","dont","name","named","called","new","said","may","known","became","made","clue","man", "said","type","part","last","seen", "whose","now","people","crew")
+subset_corpus <- tm_map(subset_corpus, removeWords, words_to_remove)
+```
+5. Produce the wordcloud
+```{r}
+wordcloud(words = subset_corpus, max.words =20, random.order = FALSE, colors = brewer.pal(8,"Dark2"))
+```
+
 ## Data
 
 | Variable    | Variable Type | Description                               |
