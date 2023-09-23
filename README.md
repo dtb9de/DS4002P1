@@ -1,4 +1,4 @@
-# Project1MI3.Group5
+# Project 1: MI3 Group5
 MI3 Data Analysis using Word Clouds for Project 1 Group 5 for DS 4002
 
 Team Members:
