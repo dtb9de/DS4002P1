@@ -56,8 +56,7 @@ corpus <- tm_map(corpus, stripWhitespace)              # Strip whitespace
 
 ### Code Usage
 
-####Example of producing a wordcloud 
-WordCloud
+Producing a word cloud:
 
 1. Compile specific years data for analyzing 
 ```{r}
@@ -129,3 +128,8 @@ https://parade.com/tv/alex-trebek-first-ever-jeopardy-episode-premiere-march-30-
 [2] "Jeopardy (American television game show)." Britannica,
 https://www.britannica.com/topic/Jeopardy-American-television-game-show. Accessed:
 September 13, 2023.
+
+### Previous Submissions
+MI1: https://myuva-my.sharepoint.com/:w:/g/personal/srs8yy_virginia_edu/EUod7bAndmhPnW-_wb9_UuEBdv3Dl_-yY4szrFnZHyG8UA?e=skkBzt
+MI2: https://myuva-my.sharepoint.com/:w:/g/personal/dtb9de_virginia_edu/EbOE_-26VtpGhSplty2E6joBd7crYj7pRcOFT0oxlzT4Bg?e=7aiQYW
+
